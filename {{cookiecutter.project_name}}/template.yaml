@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+
+Globals:
+  Runtime: nodejs8.10
+  Timeout: 30
+
+Resources:
+  {{cookiecutter.project_name}}:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      CodeUri: .
+      Description: A lambda created with aws sam
+      Events:
+        GetData:
+          Type: Api
+          Properties:
+            Path: /api/docs
+            Method: get
