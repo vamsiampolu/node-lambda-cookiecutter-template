@@ -1,4 +1,4 @@
 {
-  "name": "sample-lambda-node8.10",
+  "project_name": "sample-lambda-node8.10",
   "description": "Creates a lambda function that responds to a GET event from an API Gateway"
 }
